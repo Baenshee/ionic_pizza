@@ -14,5 +14,12 @@
 
 
 <ion-content padding>
-
+  {{data}}
+  <ion-list *ngIf="pizzaList">
+    <ion-card *ngFor="let pizza of pizzaList">
+      <img src="{{pizza.picture}}">
+      <ion-card-header>{{pizza.name}}</ion-card-header>
+      <ion-card-content>{{pizza.desc}}</ion-card-content>
+    </ion-card>
+  </ion-list>
 </ion-content>

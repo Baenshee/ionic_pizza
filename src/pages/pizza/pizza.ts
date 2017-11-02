@@ -14,14 +14,15 @@ import { PizzaServiceProvider} from "../../providers/pizza-service/pizza-service
   templateUrl: 'pizza.html',
 })
 export class PizzaPage {
-  private pizzaList: object;
+  public pizzaList: any;
   constructor(public navCtrl: NavController, public navParams: NavParams, private pizzaService: PizzaServiceProvider) {
+    this.pizzaList=[];
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PizzaPage');
     this.pizzaService.load().then((data)=>{
-      console.log(data);
+      console.log(data[0]);
       this.pizzaList=data;
     });
   }
