@@ -1,0 +1,88 @@
+{
+  "Pizza": {
+    "get": {
+      "url": "https://jada-baenshee.c9users.io/pizza"
+    },
+    "get with id": {
+      "url": "https://jada-baenshee.c9users.io/pizza/5a11bfa747afcd46616af4af",
+      "post": {
+        "url": "https://jada-baenshee.c9users.io/pizza",
+        "body": {
+          "pizza": {
+            "name": "test2",
+            "description": "test pizza",
+            "price": "25"
+          }
+        }
+      },
+      "put": {
+        "url": "https://jada-baenshee.c9users.io/pizza",
+        "body": {
+          "pizza": {
+            "name": "test",
+            "description": "test pizza",
+            "price": "25"
+          }
+        },
+        "headers": {
+          "Authorization": "Your-token-here"
+        }
+      },
+      "delete": {
+        "url": "https://jada-baenshee.c9users.io/pizza/5a11bfa747afcd46616af4af",
+        "headers": {
+          "Authorization": "Your-token-here"
+        }
+      }
+    }
+  },
+  "Ingredients": {
+    "get": {
+      "url": "https://jada-baenshee.c9users.io/ingredient"
+    },
+    "get with id": {
+      "url": "https://jada-baenshee.c9users.io/ingredient/5a11b93d1c30f829a0031845",
+      "post": {
+        "url": "https://jada-baenshee.c9users.io/ingredient",
+        "body": {
+          "pizza": {
+            "name": "test2",
+            "weight": "5",
+            "price": "25"
+          }
+        }
+      },
+      "put": {
+        "url": "https://jada-baenshee.c9users.io/ingredient",
+        "body": {
+          "pizza": {
+            "_id": "5a11b93d1c30f829a0031845",
+            "name": "test",
+            "weight": "4",
+            "price": "25"
+          }
+        }
+      },
+      "delete": {
+        "url": "https://jada-baenshee.c9users.io/ingredient/5a11b93d1c30f829a0031845"
+      }
+    }
+  },
+  "Ingredients": {
+    "post": {
+      "url": "https://jada-baenshee.c9users.io/user",
+      "body": {
+        "name": "test456",
+        "password": "test654"
+      }
+    },
+    "put": {
+      "url": "https://jada-baenshee.c9users.io/user",
+      "body": {
+        "name": "test456",
+        "password": "test654"
+      }
+    }
+  }
+}
+}

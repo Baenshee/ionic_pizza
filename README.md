@@ -1,6 +1,9 @@
 ## Mathieu Valero
 ## Appli pizza pour cours ionic
 
+Application basique de gestion de pizza et d'ingrédients.
+La modification/suppression de pizza ne peut être mise en place à cause du manque d'interface de login. (un token jwt doit être envoyé avec les requêtes put/delete)
+
 This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
 
 ## How to use this template
