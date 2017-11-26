@@ -43,6 +43,6 @@
       <ion-label>Picture</ion-label>
       <ion-label ion-button (click)="takePicture()">Take a Picture</ion-label>
     </ion-item>
-    <button ion-button type="submit" [disabled]="!form.valid">Submit</button>
+    <button ion-button type="submit" (click)="savePizza()" [disabled]="!form.valid">Submit</button>
   </form>
 </ion-content>
