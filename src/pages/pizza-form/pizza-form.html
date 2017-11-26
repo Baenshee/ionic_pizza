@@ -26,10 +26,6 @@
       <ion-textarea formControlName="description"></ion-textarea>
     </ion-item>
     <ion-item>
-      <ion-label>Picture</ion-label>
-      <button ion-button (click)="takePicture()">Take a Picture</button>
-    </ion-item>
-    <ion-item>
       <ion-label>Price</ion-label>
       <ion-input formControlName="price"></ion-input>
     </ion-item>
@@ -42,6 +38,10 @@
                  [checked]="ingredientsInPizza.includes(ing._id)">
         </li>
       </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Picture</ion-label>
+      <ion-label ion-button (click)="takePicture()">Take a Picture</ion-label>
     </ion-item>
     <button ion-button type="submit" [disabled]="!form.valid">Submit</button>
   </form>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {NavController, NavOptions, NavParams} from 'ionic-angular';
+import {NavController, NavParams} from 'ionic-angular';
 import {Camera} from '@ionic-native/camera';
 import {FormGroup, FormControl, Validators} from '@angular/forms';
 import {PizzaServiceProvider} from '../../providers/pizza-service/pizza-service';
