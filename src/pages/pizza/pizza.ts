@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { PizzaServiceProvider} from "../../providers/pizza-service/pizza-service";
+import {PizzaDescriptionPage} from '../pizza-description/pizza-description';
 
 /**
  * Generated class for the PizzaPage page.
@@ -20,11 +21,16 @@ export class PizzaPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad PizzaPage');
     this.pizzaService.load().then((data)=>{
       console.log(data[0]);
       this.pizzaList=data;
     });
+  }
+  choosePizza(id) {
+    console.log(id);
+    this.navCtrl.push(PizzaDescriptionPage, {
+      id:id
+    })
   }
 
 }

@@ -1,0 +1,26 @@
+  <!--
+  Generated template for the PizzaDescriptionPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+  <ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Pizza</ion-title>
+    </ion-navbar>
+  </ion-header>
+
+  <ion-content padding>
+      <ion-card *ngIf="pizza">
+        <ion-card-header>{{pizza.name}}</ion-card-header>
+        <img src="{{pizza.image}}">
+        <ion-card-content>{{pizza.description}}</ion-card-content>
+        <ion-list *ngFor="let ing of pizza.ingredients">
+          - {{ing.name}}
+        </ion-list>
+        <button ion-button (click)="addToCart()">Add to cart</button>
+      </ion-card>
+  </ion-content>

@@ -1,5 +1,5 @@
 <!--
-  Generated template for the PizzaPage page.
+  Generated template for the CartPage page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
@@ -16,12 +16,12 @@
 
 <ion-content padding>
   {{data}}
-  <div *ngIf="pizzaList">
-    <ion-list *ngFor="let pizza of pizzaList">
+  <div *ngIf="list">
+    <ion-list *ngFor="let pizza of list">
       <ion-card (click)="choosePizza(pizza._id)">
         <ion-card-header>{{pizza.name}}</ion-card-header>
-        <ion-card-content>{{pizza.desc}}</ion-card-content>
       </ion-card>
+      <button ion-button (click)="removeFromCart(pizza._id)"> Remove from Cart</button>
     </ion-list>
   </div>
 </ion-content>
