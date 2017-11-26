@@ -32,7 +32,9 @@ export class CartPage {
   }
   removeFromCart(pizza) {
     let cart = JSON.parse(localStorage.getItem('cart'));
+    console.log(cart);
     cart.splice(this.list.indexOf(pizza),1);
+    console.log(cart);
     localStorage.setItem('cart', JSON.stringify(cart));
     this.list.splice(this.list.indexOf(pizza),1);
   }

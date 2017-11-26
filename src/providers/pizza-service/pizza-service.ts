@@ -10,36 +10,29 @@ import 'rxjs/add/operator/map';
 */
 @Injectable()
 export class PizzaServiceProvider {
-  data: any;
   private readonly url = "https://jada-baenshee.c9users.io/pizza";
   constructor(private http: HttpClient) {
     console.log('Hello PizzaServiceProvider Provider');
   }
 
   load(){
-    if(this.data){
-      return Promise.resolve(this.data);
-    }
-
     return new Promise(resolve => {
       this.http.get(this.url+'/slim').subscribe((data: any) =>{
-        this.data=data.pizza;
-        resolve(this.data);
+        resolve(data.pizza);
       });
     })
   }
   getById(id){
     return new Promise(resolve => {
       this.http.get(this.url+'/'+id).subscribe((data: any) =>{
-        this.data=data.pizza;
-        resolve(this.data);
+        resolve(data.pizza);
       });
     })
   }
   add(pizza){
     return new Promise(resolve => {
       this.http.post(this.url, {pizza: pizza}).subscribe((data: any) =>{
-        resolve(data);
+        resolve(data.pizza);
       });
     })
   }

@@ -5,8 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 import { PizzaPage } from '../pages/pizza/pizza';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -18,17 +16,17 @@ import { IngredientServiceProvider } from '../providers/ingredient-service/ingre
 import {IngredientsPage} from '../pages/ingredients/ingredients';
 import {PizzaFormPage} from '../pages/pizza-form/pizza-form';
 import {Camera} from '@ionic-native/camera';
+import {IngredientFormPage} from '../pages/ingredient-form/ingredient-form';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    ListPage,
     PizzaPage,
     PizzaDescriptionPage,
     CartPage,
     IngredientsPage,
-    PizzaFormPage
+    PizzaFormPage,
+    IngredientFormPage
   ],
   imports: [
     BrowserModule,
@@ -38,13 +36,12 @@ import {Camera} from '@ionic-native/camera';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
-    ListPage,
     PizzaPage,
     PizzaDescriptionPage,
     CartPage,
     IngredientsPage,
-    PizzaFormPage
+    PizzaFormPage,
+    IngredientFormPage
   ],
   providers: [
     StatusBar,

@@ -16,12 +16,12 @@ import {PizzaServiceProvider} from '../../providers/pizza-service/pizza-service'
 })
 export class PizzaDescriptionPage {
   private id: string;
-  private pizza: Pizza;
+  private currentPizza: Pizza;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private pizzaService: PizzaServiceProvider) {
     this.id = navParams.get('id');
     this.pizzaService.getById(this.id).then((data: any) => {
-      this.pizza = data;
+      this.currentPizza = data;
     });
 
   }
@@ -33,12 +33,13 @@ export class PizzaDescriptionPage {
   addToCart() {
     if (localStorage.getItem('cart')) {
       let cart = JSON.parse(localStorage.getItem('cart'));
-      cart.push(this.pizza);
+      cart.push(this.currentPizza);
       localStorage.setItem('cart', JSON.stringify(cart));
     }
     else {
-      localStorage.setItem('cart', JSON.stringify([this.pizza]));
+      localStorage.setItem('cart', JSON.stringify([this.currentPizza]));
     }
+    this.navCtrl.pop();
   }
 
 }

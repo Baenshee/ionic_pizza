@@ -15,18 +15,22 @@ import {PizzaDescriptionPage} from '../pizza-description/pizza-description';
   templateUrl: 'pizza.html',
 })
 export class PizzaPage {
-  public pizzaList: any;
+  private pizzaList: any;
   constructor(public navCtrl: NavController, public navParams: NavParams, private pizzaService: PizzaServiceProvider) {
-    this.pizzaList=[];
+    console.log("constructor"+this.pizzaList)
   }
 
-  ionViewDidLoad() {
+  ionViewDidEnter() {
+    console.log("on load"+this.pizzaList)
+    this.pizzaList=[];
     this.pizzaService.load().then((data)=>{
-      console.log(data[0]);
+      this.pizzaList=[];
+      console.log(data);
       this.pizzaList=data;
     });
   }
   choosePizza(id) {
+    console.log("choose pizza"+this.pizzaList)
     console.log(id);
     this.navCtrl.push(PizzaDescriptionPage, {
       id:id

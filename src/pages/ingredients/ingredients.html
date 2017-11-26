@@ -18,7 +18,7 @@
   {{data}}
   <div *ngIf="ingredientList">
     <ion-list *ngFor="let ing of ingredientList">
-      <ion-card (click)="choosePizza(ing._id)">
+      <ion-card (click)="updateIngredient(ing._id)">
         <ion-card-header>{{ing.name}}</ion-card-header>
         <ion-card-content><p>Price: {{ing.price}}€<br>
           Weight: {{ing.weight}}g</p></ion-card-content>

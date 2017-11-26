@@ -3,12 +3,11 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 import { PizzaPage } from '../pages/pizza/pizza';
 import {CartPage} from '../pages/cart/cart';
 import {IngredientsPage} from '../pages/ingredients/ingredients';
 import {PizzaFormPage} from '../pages/pizza-form/pizza-form';
+import {IngredientFormPage} from '../pages/ingredient-form/ingredient-form';
 
 @Component({
   templateUrl: 'app.html'
@@ -16,7 +15,7 @@ import {PizzaFormPage} from '../pages/pizza-form/pizza-form';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = PizzaPage;
 
   pages: Array<{title: string, component: any}>;
 
@@ -25,11 +24,11 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage },
+      { title: 'Home', component: PizzaPage },
       { title: 'Pizza', component: PizzaPage },
       { title: 'Create a Pizza', component: PizzaFormPage },
       { title: 'Ingredients', component: IngredientsPage},
+      { title: 'Create an Ingredient', component: IngredientFormPage},
       { title: 'Cart' , component: CartPage}
     ];
 
